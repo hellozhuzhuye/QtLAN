@@ -41,7 +41,7 @@ void LoginDialog::showMainWindow()
     QString upwd = ui->pwdLineEdit->text();
     QSqlQuery query;
 
-    query.prepare("select *from UserInfoTest where User_Name=:name and User_Password=:pwd");
+    query.prepare("select * from UserInfoTest where User_Name=:name and User_Password=:pwd");
     query.bindValue(":pwd", upwd);
     query.bindValue(":name", uname);
     query.exec();
